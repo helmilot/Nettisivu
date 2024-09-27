@@ -8,85 +8,52 @@
     <script type="module" src="./assets/components/html-css-viewer.js"></script>
     <link rel="icon" href="favicon.png" />  <!-- Faviconin lisääminen-->
 
+    <link rel="stylesheet" href="/mainstyle.css">
+    
+
     <style>
-        body, html {
-        width:100%;
-        height:100%;
-        margin:0;
-        }
-
-        @font-face {
-          font-family: 'Vidaloka';
-          src: url('./assets/fonts/Vidaloka-Regular.woff2') format('woff2');
-        }
-        .grid {
-        background:rgb(226, 117, 108);
-        width:100%;
-        height:100%;
-        display:grid;
-        grid-template-columns: repeat(40, 1fr);
-        grid-template-rows: repeat(100, 1fr);
-        }
-        .katalogi-solu {
-        background:rgb(205, 158, 158);
-        grid-column: var(--a) / span var(--b);
-        grid-row: var(--c) / span var(--d);
-        }
-        .green {
-        background: linear-gradient(rgb(78, 87, 185), rgb(144, 47, 159), rgb(185, 52, 176))
-        }
-        .rhombus { 
-        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-        }
-
-        .textbox {
-        background:rgb(255, 255, 255);
-        grid-column: var(--a) / span var(--b);
-        grid-row: var(--c) / span var(--d);
-        }
 
       </style>
+      
     </head>
 
     <body>
 
         <div class="grid">          <!-- GRIDI, jonka sisällä tapahtuu asioita-->
-
+            
             <div 
-                class="textbox" 
-                style="--a:1;--b:40;--c:1;--d:4">
-                <div class="yks" id = "uniikki">
-                    <h1>Tänään on hyvä päivä ostaa!</h1>
+                class="textbox" style="--a:1;--b:40;--c:1;--d:4">
+                <div class="scrolling-text-inner" style="--marquee-speed: 20s; --direction:scroll-left" role="marquee">
+                    <div class="scrolling-text-item">Tänään on hyvä päivä ostaa! </div>
                 </div>
             </div>
 
-            <div 
-                class="textbox" 
-                style="--a:1;--b:40;--c:50;--d:4">
-                <div class="yks" id = "uniikki">
-                    <h1>Tänään on hyvä päivä ostaa!</h1>
+            
+            <div class="textbox" style="--a:1;--b:40;--c:80;--d:6">
+                <div class="scrolling-text-inner" style="--marquee-speed: 20s; --direction:scroll-left" role="marquee">
+                    <div class="scrolling-text-item">Ostoskorissasi odottaa yllätys! </div>
                 </div>
             </div>
 
             <div 
                 class="katalogi-solu rhombus green" 
-                style="--a:5;--b:3;--c:10;--d:8">
+                style="--a:5;--b:3;--c:30;--d:8">
             </div>
 
             <div 
                 class="katalogi-solu rhombus" 
-                style="--a:8;--b:3;--c:8;--d:8">
+                style="--a:8;--b:3;--c:32;--d:8">
             </div>
 
-            <div 
-                class="katalogi-solu rhombus" 
-                style="--a:10;--b:3;--c:13;--d:8">
+            <div class="katalogi-solu rhombus" style="--a:10;--b:3;--c:35;--d:8">
             </div>
 
-            <div 
-                class="katalogi-solu rhombus" 
-                style="--a:1;--b:40;--c:70;--d:4">
+            <div class="katalogi-solu rhombus" 
+                style="--a:10;--b:10;--c:40;--d:30">
+                <img clas="img.sormu" src="./assets/img/sormu.png">
             </div>
+
+            <img clas="img.sormu2" src="./assets/img/sormu.png">
 
         </div>
 
