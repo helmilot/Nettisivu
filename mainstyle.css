@@ -2,6 +2,7 @@
 
 
 @font-face {
+
     font-family: "Vidaloka";
     src: url('./assets/fonts/Vidaloka-Regular.woff2') format('woff2');
 }
@@ -13,6 +14,7 @@ margin:0;
 font-family: "Vidaloka";
 }
 
+
 .grid {
 background:rgb(255, 212, 209);
 width:100%;
@@ -20,6 +22,8 @@ height:100%;
 display:grid;
 grid-template-columns: repeat(40, 1fr);
 grid-template-rows: repeat(100, 1fr);
+background-color: #e5e5f7;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
 }
 .katalogi-solu {
 background:rgb(205, 158, 158);
@@ -27,24 +31,22 @@ grid-column: var(--a) / span var(--b);
 grid-row: var(--c) / span var(--d);
 }
 .green {
-background: linear-gradient(rgb(78, 87, 185), rgb(144, 47, 159), rgb(185, 52, 176))
+background: linear-gradient(rgb(237, 226, 75), rgb(246, 184, 50), rgb(117, 108, 89))
 }
 .rhombus { 
 clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 
 .textbox {
-background:rgb(255, 212, 209);
 grid-column: var(--a) / span var(--b);
 grid-row: var(--c) / span var(--d);
 font-family: 'Vidaloka';                                                    /* Tästä vaihdetaan pääotsikoiden fontit */
 }
 
-
 .scrolling-text-inner {                                                     /* Inner container styles */
 display: grid;
 white-space: nowrap;
-font-size: 60px;
+font-size: 40px;
 font-weight: 600;
 padding: 40px 0;
 }
@@ -70,3 +72,18 @@ animation: var(--direction) var(--marquee-speed) linear infinite;
         transform: translateX(-100%);
     }
 }
+
+.item-image img {
+    width: 100px;  /* Set the width */
+    height: 70px; /* Set the height */
+    object-fit: top; /* Control how the image fits in the grid */
+    z-index: 1;
+    position: absolute;
+  }
+
+  .item-image {
+    grid-column: 9;
+    grid-row: 32 / span 3;
+    /* grid-column: span 1; /* Makes the image span across 2 columns */
+    /* grid-row: span 2; /* Makes the image span across 2 rows */
+  }
