@@ -87,3 +87,4 @@ animation: var(--direction) var(--marquee-speed) linear infinite;
     /* grid-column: span 1; /* Makes the image span across 2 columns */
     /* grid-row: span 2; /* Makes the image span across 2 rows */
   }
+
