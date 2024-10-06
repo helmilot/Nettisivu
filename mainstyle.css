@@ -1,6 +1,4 @@
 
-
-
 @font-face {
 
     font-family: "Vidaloka";
@@ -12,26 +10,56 @@ width:100%;
 height:100%;
 margin:0;
 font-family: "Vidaloka";
+background-color: #f0cef6;
 }
-
 
 .grid {
 background:rgb(255, 212, 209);
-width:100%;
-height:100%;
+/*width:100%; */
+/*height:100%; */
 display:grid;
 grid-template-columns: repeat(40, 1fr);
 grid-template-rows: repeat(100, 1fr);
-background-color: #e5e5f7;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #444cf7 );
+background-color: #2e3b6c;
+width: 1500px; /* Optional: container size */
+height: 700px; /* Optional: container size */
 }
+
+.grid2 {
+background:rgb(207, 153, 226);
+/*width:100%; */
+/*height:100%; */
+display:grid;
+grid-template-columns: repeat(40, 1fr);
+grid-template-rows: repeat(100, 1fr);
+background-color: #e620cf;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #cb6dbc55, #b663c4 );
+width: 1500px; /* Optional: container size */
+height: 700px; /* Optional: container size */
+}
+
+.grid3 {
+background:rgb(238, 242, 11);
+/*width:100%; */
+/*height:100%; */
+display:grid;
+grid-template-columns: repeat(40, 1fr);
+grid-template-rows: repeat(100, 1fr);
+background-color: #e64e20;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #dbb433 );
+width: 1500px; /* Optional: container size */
+height: 700px; /* Optional: container size */
+}
+
 .katalogi-solu {
 background:rgb(205, 158, 158);
 grid-column: var(--a) / span var(--b);
 grid-row: var(--c) / span var(--d);
+filter: blur(0.70px);
 }
+
 .green {
-background: linear-gradient(rgb(237, 226, 75), rgb(246, 184, 50), rgb(117, 108, 89))
+background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108, 89))
 }
 .rhombus { 
 clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
@@ -59,10 +87,9 @@ display: grid;
 padding: 0 30px;
 }
 
-.scrolling-text-inner>div {                                                 /* Apply the animation to the text items */
+.scrolling-text-inner {                                                 /* Apply the animation to the text items */
 animation: var(--direction) var(--marquee-speed) linear infinite;
 }
-
 
 @keyframes scroll-left {                                                    /* Setting the Animation using Keyframes */
     0% {
@@ -74,16 +101,16 @@ animation: var(--direction) var(--marquee-speed) linear infinite;
 }
 
 .item-image img {
-    width: 100px;  /* Set the width */
-    height: 70px; /* Set the height */
+    width: var(--h);  /* Oli ennen 100px Set the width */
+    height: var(--j); /* Oli ennen 70 px Set the height */
     object-fit: top; /* Control how the image fits in the grid */
     z-index: 1;
     position: absolute;
   }
 
   .item-image {
-    grid-column: 9;
-    grid-row: 32 / span 3;
+    grid-column: var(--u);
+    grid-row: var(--v);
     /* grid-column: span 1; /* Makes the image span across 2 columns */
     /* grid-row: span 2; /* Makes the image span across 2 rows */
   }
