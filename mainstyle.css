@@ -10,7 +10,13 @@ width:100%;
 height:100%;
 margin:0;
 font-family: "Vidaloka";
-background-color: #f0cef6;
+background-image: repeating-conic-gradient(#eaeafd 0% 25%, #e4fbff 0% 50%);
+background-position: 0 0, 10px 10px;
+background:
+      conic-gradient(from 116.56deg at calc(100%/3) 0, #0000 90deg,#ffc0fc 0),
+      conic-gradient(from -63.44deg at calc(200%/3) 100%, #0000 90deg,#ffc0fc 0)
+      #e8e8fd;
+background-size: 32px 32px;
 }
 
 .grid {
