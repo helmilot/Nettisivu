@@ -27,9 +27,9 @@
         width:100%;
         height:100%;
         font-family: "Vidaloka";
-        background: rgb(29, 0, 9);
+        background: rgb(68, 67, 85);
         margin: 75px;
-        margin-top:300px;
+        margin-top:100px;
         margin-right: 200px;
         padding: 0;
         overflow: auto;
@@ -38,10 +38,17 @@
       .text {
         width: 100%;
         font-size: 50px;
-        color: rgb(78, 1, 33);
-        text-shadow: rgb(72, 14, 39) 15px 0 15px;
-        opacity:0.8;
-      }
+        color: rgb(183, 0, 76);
+        text-shadow: rgb(194, 0, 84) 15px 0 15px;
+        opacity: 0.8;
+        text-align: center; /* Vaakasuuntaiseen keskitykseen */
+        
+        /* Pystysuuntaiseen keskitykseen */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh; /* Esimerkki: täysi näkymäkorkeus */
+        }
 
 
             /* HIIRI */
@@ -56,13 +63,12 @@
 
       .star {
           position: absolute;
-          width: 100px;
-          aspect-ratio: 1;
-          --g:/20.56% 20.56% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
-          mask: 100% 50% var(--g),93.301% 75% var(--g),75% 93.301% var(--g),50% 100% var(--g),25% 93.301% var(--g),6.699% 75% var(--g),0% 50% var(--g),6.699% 25% var(--g),25% 6.699% var(--g),50% 0% var(--g),75% 6.699% var(--g),93.301% 25% var(--g),radial-gradient(100% 100%,#000 38.366%,#0000 calc(38.366% + 1px));
-          background-color: rgba(233, 56, 12, 0.8); /* Valkoinen väri, hieman läpikuultava */
+            height: 300px;
+            width: 250px;
+            background: #EDC951;
+          background-color: rgba(255, 255, 255, 0.8); /* Valkoinen väri, hieman läpikuultava */
           border-radius: 50%;
-          box-shadow: 0 0 70px rgb(214, 255, 250), 0 0 70px rgba(238, 236, 255, 0.7);
+          box-shadow: 0 0 70px rgb(255, 255, 255), 0 0 70px rgba(238, 236, 255, 0.7);
           animation: fade 6s ease-out forwards;
       }
 
@@ -86,7 +92,12 @@
     <div class="text" id = "uniikki">
 
     <p> 
-        Kapitalismi vapauttaa ihmisen valitsemaan oman polkunsa ja<br> rakentamaan vaurautta omien kykyjensä mukaan!
+        Voitot<br>
+        tarjoavat likviditeetin,<br>
+        joka mahdollistaa<br>
+        proaktiivisen innovaatiostrategian<br>
+        ja<br>
+        jatkuvan kilpailuedun ylläpitämisen!
     
     </p>
 
@@ -120,11 +131,11 @@
                 star.style.left = `${x + Math.random() * 10 - 5}px`;
                 star.style.top = `${y + Math.random() * 10 - 5}px`;
 
-                const size = Math.random() * 8 + 2;
+                const size = Math.random() * 20 + 2;
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
-                star.style.backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.8)`;
-
+                let grayShade = Math.random() * 255;
+                star.style.backgroundColor = `rgba(${grayShade}, ${grayShade}, ${grayShade}, 0.8)`;
                 starContainer.appendChild(star);
 
                 setTimeout(() => {
