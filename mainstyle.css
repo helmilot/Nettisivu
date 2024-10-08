@@ -126,4 +126,5 @@ animation: var(--direction) var(--marquee-speed) linear infinite;
     position: absolute;
     top: 12px; /* Sijoittaa elementin yläreunaan */
     right: 50px; /* Sijoittaa elementin oikeaan reunaan */
+    opacity:0.8;
 }
