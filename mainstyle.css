@@ -61,9 +61,27 @@ grid-row: var(--c) / span var(--d);
 }
 
 .green {
-background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108, 89))
-
+background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108, 89));
 }
+
+.white {
+    background: linear-gradient(rgb(238, 232, 235), rgb(216, 208, 213), rgb(117, 108, 89));
+    }
+
+.bannercol {
+    background: rgb(5, 13, 46);
+}
+
+.bannertext {
+    grid-column: var(--a) / span var(--b);
+    grid-row: var(--c) / span var(--d);
+    color: rgb(42, 31, 148);
+    text-align: left;   
+    font-size: 20px;   
+    margin:10px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
+    }
+
+
 .rhombus { 
 clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
@@ -124,10 +142,8 @@ animation: var(--direction) var(--marquee-speed) linear infinite;
 
   .logo img {
     position: absolute;
-    width: 90px;  
-    height: 100px; 
-    top: 90px; /* Sijoittaa elementin yläreunaan */
-    right: 90px; /* Sijoittaa elementin oikeaan reunaan */
-    opacity:0.8;
-    background-color: #dab3e1;
-}
+    background-color: #520c4a;
+    margin-left: 1230px;
+    margin-top: 20px;
+    width:100px;
+  }
