@@ -33,29 +33,25 @@ height: 700px; /* Optional: container size */
 }
 
 .grid2 {
-background:rgb(207, 153, 226);
-/*width:100%; */
-/*height:100%; */
 display:grid;
 grid-template-columns: repeat(40, 1fr);
 grid-template-rows: repeat(100, 1fr);
 background-color: #e620cf;
 background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #cb6dbc55, #b663c4 );
 width: 1500px; /* Optional: container size */
-height: 700px; /* Optional: container size */
+height: 500px; /* Optional: container size */
 }
 
 .grid3 {
-background:rgb(238, 242, 11);
 /*width:100%; */
 /*height:100%; */
 display:grid;
 grid-template-columns: repeat(40, 1fr);
 grid-template-rows: repeat(100, 1fr);
-background-color: #e64e20;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #444cf755, #dbb433 );
+background: rgb(46,59,108);
+background: linear-gradient(90deg, rgb(8, 25, 86) 0%, rgb(155, 13, 67) 50%, rgba(40,52,96,1) 100%);
 width: 1500px; /* Optional: container size */
-height: 700px; /* Optional: container size */
+height: 1000px; /* Optional: container size */
 }
 
 .katalogi-solu {
@@ -83,7 +79,9 @@ display: grid;
 white-space: nowrap;
 font-size: 40px;
 font-weight: 600;
-padding: 40px 0;
+padding: 10px 20px;
+color: #e620cf;
+text-shadow: rgb(204, 35, 176) 15px 0 15px;
 }
 
 .scrolling-text {                                                           /* Text styles */
@@ -124,7 +122,10 @@ animation: var(--direction) var(--marquee-speed) linear infinite;
 
   .logo img {
     position: absolute;
-    top: 12px; /* Sijoittaa elementin yläreunaan */
-    right: 50px; /* Sijoittaa elementin oikeaan reunaan */
+    width: 90px;  
+    height: 100px; 
+    top: 90px; /* Sijoittaa elementin yläreunaan */
+    right: 90px; /* Sijoittaa elementin oikeaan reunaan */
     opacity:0.8;
+    background-color: #dab3e1;
 }
