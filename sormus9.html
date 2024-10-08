@@ -1,0 +1,138 @@
+<!DOCTYPE html> <!-- Jokaisen html tiedoston pitää alkaa tällä elementillä-->
+<html lang="fi"> <!-- kertoo selaimelle, että kyseessä suomenkielinen dokkari (attribuutti),määrittä siis kielen-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Kapitalismi vapauttaa</title> 
+    <script type="module" src="./assets/components/html-css-viewer.js"></script>
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tähtisade</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+      
+        @font-face {
+
+        font-family: "Vidaloka";
+        src: url('./assets/fonts/Vidaloka-Regular.woff2') format('woff2');
+        }  
+
+
+      body {
+        width:100%;
+        height:100%;
+        font-family: "Vidaloka";
+        background: rgb(29, 0, 9);
+        margin: 75px;
+        margin-top:300px;
+        margin-right: 200px;
+        padding: 0;
+        overflow: auto;
+      }
+
+      .text {
+        width: 100%;
+        font-size: 50px;
+        color: rgb(78, 1, 33);
+        text-shadow: rgb(72, 14, 39) 15px 0 15px;
+        opacity:0.8;
+      }
+
+
+            /* HIIRI */
+            #star-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* Ei estä muiden elementtien klikkauksia */
+     }
+
+      .star {
+          position: absolute;
+          width: 100px;
+          aspect-ratio: 1;
+          --g:/20.56% 20.56% radial-gradient(#000 calc(71% - 1px),#0000 71%) no-repeat;
+          mask: 100% 50% var(--g),93.301% 75% var(--g),75% 93.301% var(--g),50% 100% var(--g),25% 93.301% var(--g),6.699% 75% var(--g),0% 50% var(--g),6.699% 25% var(--g),25% 6.699% var(--g),50% 0% var(--g),75% 6.699% var(--g),93.301% 25% var(--g),radial-gradient(100% 100%,#000 38.366%,#0000 calc(38.366% + 1px));
+          background-color: rgba(233, 56, 12, 0.8); /* Valkoinen väri, hieman läpikuultava */
+          border-radius: 50%;
+          box-shadow: 0 0 70px rgb(214, 255, 250), 0 0 70px rgba(238, 236, 255, 0.7);
+          animation: fade 6s ease-out forwards;
+      }
+
+      @keyframes fade {
+          from {
+              opacity: 1;
+              transform: scale(1);
+          }
+          to {
+              opacity: 0;
+              transform: scale(1.5);
+          }
+      }
+
+      /* HIIRi */
+
+
+    </style>
+</head>
+<body>
+    <div class="text" id = "uniikki">
+
+    <p> 
+        Kapitalismi vapauttaa ihmisen valitsemaan oman polkunsa ja<br> rakentamaan vaurautta omien kykyjensä mukaan!
+    
+    </p>
+
+
+        <!-- HIIRI -->
+
+        <div id="star-container"></div>
+        <script src="script.js"></script>
+        <div id="star-container"></div>
+
+        <!-- JavaScript koodi suoraan HTML:ssä -->
+        <script>
+            const starContainer = document.getElementById('star-container');
+
+            let lastStarTime = 0;
+            const starInterval = 150;  // Vähentää kuinka usein tähti voi syntyä
+
+            document.addEventListener('mousemove', function (e) {
+                const currentTime = Date.now();
+
+                // Tähti luodaan, jos kulunut aika on riittävä ja satunnainen tarkistus menee läpi
+                if (currentTime - lastStarTime > starInterval && Math.random() < 0.4) {  // 40% todennäköisyys
+                    createStar(e.pageX, e.pageY);
+                    lastStarTime = currentTime;
+                }
+            });
+
+            function createStar(x, y) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = `${x + Math.random() * 10 - 5}px`;
+                star.style.top = `${y + Math.random() * 10 - 5}px`;
+
+                const size = Math.random() * 8 + 2;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.8)`;
+
+                starContainer.appendChild(star);
+
+                setTimeout(() => {
+                    star.remove();
+                }, 2000);
+            }
+        </script>
+
+
+</body>
+</html> <!-- htlm-elementin sulkeminen-->
