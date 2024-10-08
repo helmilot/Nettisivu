@@ -26,7 +26,8 @@ background:rgb(255, 212, 209);
 display:grid;
 grid-template-columns: repeat(40, 1fr);
 grid-template-rows: repeat(100, 1fr);
-background-color: #2e3b6c;
+background: rgb(46,59,108);
+background: linear-gradient(90deg, rgba(46,59,108,1) 0%, rgba(11,19,48,1) 50%, rgba(40,52,96,1) 100%);
 width: 1500px; /* Optional: container size */
 height: 700px; /* Optional: container size */
 }
@@ -121,3 +122,8 @@ animation: var(--direction) var(--marquee-speed) linear infinite;
     /* grid-row: span 2; /* Makes the image span across 2 rows */
   }
 
+  .logo img {
+    position: absolute;
+    top: 12px; /* Sijoittaa elementin yläreunaan */
+    right: 50px; /* Sijoittaa elementin oikeaan reunaan */
+}
