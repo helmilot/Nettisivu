@@ -58,11 +58,11 @@ height: 1000px; /* Optional: container size */
 background:rgb(205, 158, 158);
 grid-column: var(--a) / span var(--b);
 grid-row: var(--c) / span var(--d);
-filter: blur(0.70px);
 }
 
 .green {
 background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108, 89))
+
 }
 .rhombus { 
 clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
@@ -82,6 +82,8 @@ font-weight: 600;
 padding: 10px 20px;
 color: #e620cf;
 text-shadow: rgb(204, 35, 176) 15px 0 15px;
+filter:blur(1px);
+opacity: 0.9;
 }
 
 .scrolling-text {                                                           /* Text styles */
