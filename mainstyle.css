@@ -64,9 +64,23 @@ grid-row: var(--c) / span var(--d);
 background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108, 89));
 }
 
-.white {
-    background: linear-gradient(rgb(238, 232, 235), rgb(216, 208, 213), rgb(117, 108, 89));
+.squarecol {
+    background: linear-gradient(rgb(16, 34, 172), rgb(111, 102, 204), rgb(127, 145, 215));
     }
+
+.white {
+    background: rgb(205, 156, 186);
+    }
+
+.middle {
+    background: rgb(204, 136, 211);
+    }    
+
+.border {
+    border-style: solid;
+    border-color: black;
+    border-width: 50px;
+}
 
 .bannercol {
     background: rgb(5, 13, 46);
@@ -81,6 +95,22 @@ background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108,
     margin:10px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
     }
 
+.bannertext2 {
+    grid-column: var(--a) / span var(--b);
+    grid-row: var(--c) / span var(--d);
+    color: rgb(75, 51, 137);
+    text-align: left;   
+    font-size: 20px;   
+    margin:10px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
+}    
+
+.bannercol2 {
+    background: rgb(73, 81, 171);
+ }        
+
+ .bannercol3 {
+    background: rgb(204, 87, 171);
+ }   
 
 .rhombus { 
 clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
