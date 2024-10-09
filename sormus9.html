@@ -66,9 +66,10 @@
             height: 300px;
             width: 250px;
             background: #EDC951;
-          background-color: rgba(255, 255, 255, 0.8); /* Valkoinen väri, hieman läpikuultava */
+
+          background-color: rgba(233, 56, 12, 0.8); /* Valkoinen väri, hieman läpikuultava */
           border-radius: 50%;
-          box-shadow: 0 0 70px rgb(255, 255, 255), 0 0 70px rgba(238, 236, 255, 0.7);
+          box-shadow: 0 0 70px rgb(214, 255, 250), 0 0 70px rgba(238, 236, 255, 0.7);
           animation: fade 6s ease-out forwards;
       }
 
@@ -131,11 +132,12 @@
                 star.style.left = `${x + Math.random() * 10 - 5}px`;
                 star.style.top = `${y + Math.random() * 10 - 5}px`;
 
-                const size = Math.random() * 20 + 2;
+                const size = Math.random() * 40 + 2;
                 star.style.width = `${size}px`;
                 star.style.height = `${size}px`;
-                let grayShade = Math.random() * 255;
-                star.style.backgroundColor = `rgba(${grayShade}, ${grayShade}, ${grayShade}, 0.8)`;
+                let grayValue = Math.random() * 255; // Generates a random value between 0 and 255 for gray shades
+                star.style.backgroundColor = `rgba(${grayValue}, ${grayValue}, ${grayValue}, 0.8)`;
+
                 starContainer.appendChild(star);
 
                 setTimeout(() => {
