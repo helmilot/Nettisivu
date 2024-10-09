@@ -47,7 +47,7 @@ height: 500px; /* Optional: container size */
 /*height:100%; */
 display:grid;
 grid-template-columns: repeat(40, 1fr);
-grid-template-rows: repeat(100, 1fr);
+grid-template-rows: repeat(90, 1fr);
 background: rgb(46,59,108);
 background: linear-gradient(90deg, rgb(8, 25, 86) 0%, rgb(155, 13, 67) 50%, rgba(40,52,96,1) 100%);
 width: 1500px; /* Optional: container size */
@@ -64,13 +64,23 @@ grid-row: var(--c) / span var(--d);
 background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108, 89));
 }
 
+.purple {
+    /*background: linear-gradient(rgb(31, 37, 160), rgb(99, 99, 178), rgb(117, 108, 89));*/
+    background-color: #041b8e;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #1313ab 10px ), repeating-linear-gradient( #3d4d9b55, #7185d0 );
+    }
+
 .squarecol {
-    background: linear-gradient(rgb(16, 34, 172), rgb(111, 102, 204), rgb(127, 145, 215));
+    background: linear-gradient(rgb(210, 32, 82), rgb(215, 108, 160), rgb(127, 145, 215));
     }
 
 .white {
     background: rgb(205, 156, 186);
     }
+
+.lightblue {
+    background: linear-gradient(90deg, rgb(151, 166, 221) 0%, rgb(170, 174, 236) 50%, rgb(92, 112, 184) 100%);
+}    
 
 .middle {
     background: rgb(204, 136, 211);
@@ -93,7 +103,7 @@ background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108,
     text-align: left;   
     font-size: 20px;   
     margin:10px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
-    }
+    } 
 
 .bannertext2 {
     grid-column: var(--a) / span var(--b);
@@ -103,6 +113,26 @@ background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108,
     font-size: 20px;   
     margin:10px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
 }    
+
+.celltext {
+    color: rgb(23, 40, 188);
+    text-align: center;   
+    font-size: 17px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
+}  
+
+.celltext2 {
+    color: rgb(37, 43, 101);
+    text-align: center;   
+    font-size: 16px;
+    margin: 10px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
+}  
+
+.celltext3 {
+    color: rgb(37, 43, 101);
+    text-align: center;   
+    font-size: 14px;
+    margin: 10px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
+}
 
 .bannercol2 {
     background: rgb(73, 81, 171);
@@ -115,6 +145,10 @@ background: linear-gradient(rgb(255, 51, 177), rgb(244, 166, 214), rgb(117, 108,
 .rhombus { 
 clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
+
+.circle { 
+    border-radius: 50%; /* Pyöristä kulmat täsmälleen ympyräksi */
+    }
 
 .textbox {
 grid-column: var(--a) / span var(--b);
