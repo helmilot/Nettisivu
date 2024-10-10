@@ -78,6 +78,10 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #131
     background: rgb(205, 156, 186);
     }
 
+.pink {
+    background: rgb(157, 47, 115);
+}    
+
 .lightblue {
     background: linear-gradient(90deg, rgb(151, 166, 221) 0%, rgb(170, 174, 236) 50%, rgb(92, 112, 184) 100%);
 }    
@@ -150,7 +154,7 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #131
 } 
 
 .squaretext3 {
-    color: rgb(105, 92, 221);
+    color: rgb(71, 56, 204);
     margin: 10px;
     text-align: center;   
     font-size: 12px; 
@@ -158,7 +162,7 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #131
 } 
 
 .squaretext4 {
-    color: rgb(105, 92, 221);
+    color: rgb(49, 31, 204);
     margin-top: -3px;
     text-align: center;   
     font-size: 9px; 
@@ -177,6 +181,18 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #131
     text-align: center;   
     font-size: 14px;
     margin: 10px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
+}
+
+.celltext4 {
+    color: rgb(65, 0, 31);
+    text-align: center;   
+    font-size: 11px;                                           /* Tästä vaihdetaan pääotsikoiden fontit */
+}
+
+.celltext5 {
+    color: rgb(65, 0, 31);
+    text-align: center;   
+    font-size: 9px;                                           /* Tästä vaihdetaan pääotsikoiden fontit */
 }
 
 .bannercol2 {
@@ -240,19 +256,135 @@ animation: var(--direction) var(--marquee-speed) linear infinite;
     object-fit: top; /* Control how the image fits in the grid */
     z-index: 1;
     position: absolute;
+
+    /* LISÄTTIIN LPUSSA */
+    box-shadow:
+    0 0 8px 3px #5439ae,  /* inner white */
+    0 0 100px 6px rgb(141, 92, 167), /* middle magenta */
+    0 0 90px 9px rgb(176, 66, 172); /* outer cyan */
   }
 
   .item-image {
     grid-column: var(--u);
     grid-row: var(--v);
-    /* grid-column: span 1; /* Makes the image span across 2 columns */
-    /* grid-row: span 2; /* Makes the image span across 2 rows */
   }
 
   .logo img {
     position: absolute;
-    background-color: #161e53;
-    margin-left: 1270px;
-    margin-top: 20px;
-    width:100px;
+    margin-left: 1280px;
+    margin-top: 30px;
+    width:70px;
+    background: rgb(14, 26, 75); 
+    border: 5px solid #090942; 
+    padding: 7px; 
+    border-radius: 8px; 
+    animation: glow 5s infinite ease-in-out;
   }
+
+
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px); 
+    }
+  }
+  
+  .bounce {
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce2 {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(-15px); /
+    }
+  }
+  
+  .bounce2 {
+    animation: bounce 3s infinite; 
+
+  }
+
+  @keyframes bounce3 {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    40% {
+      transform: translateX(-6px); /
+    }
+  }
+  
+  .bounce3 {
+    animation: bounce 10s infinite; 
+
+  }
+
+
+
+    @keyframes rotate {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg); /* Pyörähdyksen asteet */
+        }
+      }
+      
+      .rotate {
+        animation: rotate 6s ease-in-out infinite; /* Aika, pehmeä liike ja jatkuva animaatio */
+      }
+
+
+      @keyframes rotate2 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg); /* Pyörähdyksen asteet */
+        }
+      }
+      
+      .rotate2 {
+        animation: rotate 15s ease-in-out infinite; /* Aika, pehmeä liike ja jatkuva animaatio */
+      }
+
+
+      @keyframes rotate3 {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(-360deg); /* Pyörähdyksen asteet */
+        }
+      }
+      
+      .rotate3 {
+        animation: rotate 20s ease-in-out infinite; /* Aika, pehmeä liike ja jatkuva animaatio */
+      }
+    
+
+
+      @keyframes glow {
+        0% {
+          box-shadow: 
+                  0 0 4px 2px rgba(55, 70, 85, 0.5),  /* inner shadow */
+                  0 0 6px 3px rgba(135, 88, 160, 0.3), /* middle magenta */
+                  0 0 20px 4px rgba(95, 66, 176, 0.2); /* outer cyan */
+        }
+        50% {
+          box-shadow: 
+                  0 0 6px 3px rgba(55, 70, 85, 0.6),  /* inner shadow */
+                  0 0 10px 5px rgba(135, 88, 160, 0.5), /* middle magenta */
+                  0 0 30px 6px rgba(95, 66, 176, 0.3); /* outer cyan */
+        }
+        100% {
+          box-shadow: 
+                  0 0 4px 2px rgba(55, 70, 85, 0.5),  /* inner shadow */
+                  0 0 6px 3px rgba(135, 88, 160, 0.3), /* middle magenta */
+                  0 0 20px 4px rgba(95, 66, 176, 0.2); /* outer cyan */
+        }
+      }
