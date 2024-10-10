@@ -1,0 +1,121 @@
+<!DOCTYPE html> <!-- Jokaisen html tiedoston pitää alkaa tällä elementillä-->
+<html lang="fi"> <!-- kertoo selaimelle, että kyseessä suomenkielinen dokkari (attribuutti),määrittä siis kielen-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valintasi tukee</title> 
+    <script type="module" src="./assets/components/html-css-viewer.js"></script>
+
+  <!-- HIIRI-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tähtisade</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+      
+        @font-face {
+
+        font-family: "Vidaloka";
+        src: url('./assets/fonts/Vidaloka-Regular.woff2') format('woff2');
+        }  
+
+
+      body {
+        width:100%;
+        height:100%;
+        font-family: "Vidaloka";
+        background:#9898d4;
+        margin: 80px;
+        margin-top:200px;
+        padding: 0;
+        overflow: auto;
+      }
+
+      .text {
+        width: 100%;
+        font-size: 70px;
+        color: rgb(221, 219, 231);
+        text-shadow: rgb(124, 105, 221) 1px 0 10px;
+      }
+
+      /* HIIRI */
+      #star-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* Ei estä muiden elementtien klikkauksia */
+     }
+
+      .star {
+          position: absolute;
+          width: 15px;
+          height: 4px;
+          background-color: rgba(255, 255, 255, 1); /* Valkoinen väri, hieman läpikuultava */
+          border-radius: 100%;
+          box-shadow: 0 0 10px rgb(214, 255, 250), 0 0 15px rgba(238, 236, 255, 0.7);
+          animation: fade 3s forwards;
+      }
+
+      @keyframes fade {
+          from {
+              opacity: 7;
+          }
+          to {
+              opacity: 0;
+              transform: scale(2);
+          }
+      }
+
+      /* HIIRi */
+
+    </style>
+</head>
+<body>
+    <div class="text" id = "uniikki">
+
+    <p> 
+        Vapaus luo tilaa innovaatioille, <br/>
+        jotka rakentavat 
+        <br/>
+        <br/>
+        <br/>
+        <br/>...................huomisen.
+    
+    </p>
+
+    <!-- HIIRI -->
+
+        <div id="star-container"></div>
+        <script src="script.js"></script>
+        <div id="star-container"></div>
+
+        <!-- JavaScript koodi suoraan HTML:ssä -->
+        <script>
+        const starContainer = document.getElementById('star-container');
+
+        document.addEventListener('mousemove', function (e) {
+            createStar(e.pageX, e.pageY);
+        });
+
+        function createStar(x, y) {
+        const star = document.createElement('div');
+        star.classList.add('star');
+        star.style.left = `${x + Math.random() * 10 - 5}px`;  // Satunnaiset siirtymät horisontaalisesti
+        star.style.top = `${y + Math.random() * 10 - 5}px`;    // Satunnaiset siirtymät vertikaalisesti
+        starContainer.appendChild(star);
+
+        // Poista tähti 1 sekunnin kuluttua, kun animaatio on valmis
+        setTimeout(() => {
+            star.remove();
+        }, 1000);
+    }
+        </script>
+
+
+</body>
+</html> <!-- htlm-elementin sulkeminen-->
