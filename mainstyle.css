@@ -36,8 +36,8 @@ height: 700px; /* Optional: container size */
 display:grid;
 grid-template-columns: repeat(40, 1fr);
 grid-template-rows: repeat(100, 1fr);
-background-color: #e620cf;
-background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #e5e5f7 10px ), repeating-linear-gradient( #cb6dbc55, #b663c4 );
+background-color: #760c69;
+background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #16168e 10px ), repeating-linear-gradient( #cb6dbc55, #b663c4 );
 width: 1500px; /* Optional: container size */
 height: 500px; /* Optional: container size */
 }
@@ -83,7 +83,7 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #131
 }    
 
 .middle {
-    background: rgb(204, 136, 211);
+    background: #cb6dbc55;
     }    
 
 .border {
@@ -108,10 +108,21 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #131
 .bannertext2 {
     grid-column: var(--a) / span var(--b);
     grid-row: var(--c) / span var(--d);
-    color: rgb(75, 51, 137);
+    color: rgb(53, 50, 131);
     text-align: left;   
-    font-size: 20px;   
+    font-size: 15px;   
     margin:10px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
+}    
+
+.bannertext3 {
+    grid-column: var(--a) / span var(--b);
+    grid-row: var(--c) / span var(--d);
+    color: rgb(198, 127, 162);
+    text-align: left;   
+    font-size: 15px;   
+    margin:10px;
+    text-shadow: rgb(202, 0, 101) 1px 0 10px;
+    font-style: italic;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
 }    
 
 .celltext {
@@ -119,6 +130,40 @@ background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #131
     text-align: center;   
     font-size: 17px;                                            /* Tästä vaihdetaan pääotsikoiden fontit */
 }  
+
+.squaretext {
+    color: rgb(221, 181, 193);
+    margin: 20px;
+    text-align: center; 
+    text-shadow: rgb(202, 0, 101) 1px 0 10px;  
+    font-size: 11px; 
+
+}  
+
+.squaretext2 {
+    color: rgb(223, 151, 172);
+    margin: 10px;
+    text-align: center; 
+    text-shadow: rgb(202, 0, 101) 1px 0 10px;  
+    font-size: 11px; 
+
+} 
+
+.squaretext3 {
+    color: rgb(105, 92, 221);
+    margin: 10px;
+    text-align: center;   
+    font-size: 12px; 
+
+} 
+
+.squaretext4 {
+    color: rgb(105, 92, 221);
+    margin-top: -3px;
+    text-align: center;   
+    font-size: 9px; 
+
+} 
 
 .celltext2 {
     color: rgb(37, 43, 101);
@@ -206,8 +251,8 @@ animation: var(--direction) var(--marquee-speed) linear infinite;
 
   .logo img {
     position: absolute;
-    background-color: #520c4a;
-    margin-left: 1230px;
+    background-color: #1a235c;
+    margin-left: 1270px;
     margin-top: 20px;
     width:100px;
   }
