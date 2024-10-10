@@ -1,0 +1,136 @@
+<!DOCTYPE html> <!-- Jokaisen html tiedoston pitää alkaa tällä elementillä-->
+<html lang="fi"> <!-- kertoo selaimelle, että kyseessä suomenkielinen dokkari (attribuutti),määrittä siis kielen-->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Valintasi tukee</title> 
+    <script type="module" src="./assets/components/html-css-viewer.js"></script>
+
+  <!-- HIIRI-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tähtisade</title>
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+
+      
+        @font-face {
+
+        font-family: "Vidaloka";
+        src: url('./assets/fonts/Vidaloka-Regular.woff2') format('woff2');
+        }  
+
+
+      body {
+        width:100%;
+        height:100%;
+        font-family: "Vidaloka";
+        background: rgb(10, 10, 12);
+        margin: 50px;
+        margin-top:200px;
+        padding: 0;
+        overflow: auto;
+      }
+
+      .text {
+        width: 100%;
+        font-size: 30px;
+        color: rgb(47, 27, 162);
+        text-shadow: rgb(128, 104, 248) 1px 0 10px;
+        -webkit-text-stroke: 2px rgb(131, 93, 206);
+        text-align: center;
+      }
+
+      /* HIIRI */
+      #star-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* Ei estä muiden elementtien klikkauksia */
+     }
+
+      .star {
+          position: absolute;
+          width: 200px; /* adjust to control the size */
+            aspect-ratio: 1;
+            clip-path: polygon(100% 50%,78.98% 57.76%,93.3% 75%,71.21% 71.21%,75% 93.3%,57.76% 78.98%,50% 100%,42.24% 78.98%,25% 93.3%,28.79% 71.21%,6.7% 75%,21.02% 57.76%,0% 50%,21.02% 42.24%,6.7% 25%,28.79% 28.79%,25% 6.7%,42.24% 21.02%,50% 0%,57.76% 21.02%,75% 6.7%,71.21% 28.79%,93.3% 25%,78.98% 42.24%,100% 50%,78.98% 57.76%,calc(78.98% - 11.59px) calc(57.76% - 3.11px),calc(100% - 20px) calc(50% - 0px),calc(78.98% - 11.59px) calc(42.24% - -3.11px),calc(93.3% - 17.32px) calc(25% - -10px),calc(71.21% - 8.49px) calc(28.79% - -8.49px),calc(75% - 10px) calc(6.7% - -17.32px),calc(57.76% - 3.11px) calc(21.02% - -11.59px),calc(50% - 0px) calc(0% - -20px),calc(42.24% - -3.11px) calc(21.02% - -11.59px),calc(25% - -10px) calc(6.7% - -17.32px),calc(28.79% - -8.49px) calc(28.79% - -8.49px),calc(6.7% - -17.32px) calc(25% - -10px),calc(21.02% - -11.59px) calc(42.24% - -3.11px),calc(0% - -20px) calc(50% - 0px),calc(21.02% - -11.59px) calc(57.76% - 3.11px),calc(6.7% - -17.32px) calc(75% - 10px),calc(28.79% - -8.49px) calc(71.21% - 8.49px),calc(25% - -10px) calc(93.3% - 17.32px),calc(42.24% - -3.11px) calc(78.98% - 11.59px),calc(50% - 0px) calc(100% - 20px),calc(57.76% - 3.11px) calc(78.98% - 11.59px),calc(75% - 10px) calc(93.3% - 17.32px),calc(71.21% - 8.49px) calc(71.21% - 8.49px),calc(93.3% - 17.32px) calc(75% - 10px),calc(78.98% - 11.59px) calc(57.76% - 3.11px),calc(100% - 20px) calc(50% - 0px));
+          background-color: rgba(89, 96, 191, 0.8); /* Valkoinen väri, hieman läpikuultava */
+          border-radius: 50%;
+          box-shadow: 0 0 10px rgb(214, 255, 250), 0 0 15px rgba(238, 236, 255, 0.7);
+          animation: fade 3s forwards;
+      }
+
+      @keyframes fade {
+          from {
+              opacity: 7;
+          }
+          to {
+              opacity: 0;
+              transform: scale(2);
+          }
+      }
+
+      /* HIIRi */
+
+    </style>
+</head>
+<body>
+    <div class="text" id = "uniikki">
+
+    <p> 
+        V o i t o n  t a v o i t t e l u e i o l e v a i n p ä ä m ä ä r ä, 
+        <br/>v a a n m o o t t o r i,
+        <br/> j o k a s y t y t t ä ä k e h i t y k s e n l i e k i n j a<br/>
+         v a l a i s e e t i e t ä m m e k o h t i p a r e m p a a m a a i l m a a.
+    
+    </p>
+
+    <!-- HIIRI -->
+
+        <div id="star-container"></div>
+        <script src="script.js"></script>
+        <div id="star-container"></div>
+
+        <!-- JavaScript koodi suoraan HTML:ssä -->
+        <script>
+            const starContainer = document.getElementById('star-container');
+
+            let lastStarTime = 0;
+            const starInterval = 150;  // Vähentää kuinka usein tähti voi syntyä
+
+            document.addEventListener('mousemove', function (e) {
+                const currentTime = Date.now();
+
+                // Tähti luodaan, jos kulunut aika on riittävä ja satunnainen tarkistus menee läpi
+                if (currentTime - lastStarTime > starInterval && Math.random() < 0.4) {  // 40% todennäköisyys
+                    createStar(e.pageX, e.pageY);
+                    lastStarTime = currentTime;
+                }
+            });
+
+            function createStar(x, y) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = `${x + Math.random() * 10 - 5}px`;
+                star.style.top = `${y + Math.random() * 10 - 5}px`;
+
+                const size = Math.random() * 40 + 2;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.backgroundColor = 'rgba(255, 255, 255, 0.8)';
+
+                starContainer.appendChild(star);
+
+                setTimeout(() => {
+                    star.remove();
+                }, 2000);
+            }
+        </script>
+
+
+</body>
+</html> <!-- htlm-elementin sulkeminen-->
